@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="fbtn">
+                <button class="fouls-btn" onclick="incFoul_home()">ʌ</button>
+                <button class="fouls-btn" onclick="decFoul_home()">v</button>
+            </div>
+            <div id="home-foul">
+                <h5>Fouls:</h5>
+                <div class="num-fouls">
+                    <span id="fouls-home">0</span>
+                </div>
+            </div>
+            <div class="scoreboard">
+                <h3>HOME</h3>
+                
+                <span id="home-score">0</span>
+                
+                <div class="buttons">
+                    <button class="btn-score" onclick="plus1_home()">+1</button>
+                    <button class="btn-score" onclick="plus2_home()">+2</button>
+                    <button class="btn-score" onclick="plus3_home()">+3</button>
+                </div>
+                <div >
+                    <button class="btn-score-d" onclick="minus1_home()">-1</button>
+                    <button class="btn-score-d" onclick="minus2_home()">-2</button>
+                    <button class="btn-score-d" onclick="minus3_home()">-3</button>
+                </div>
+            </div>
+            <div id="time">
+                <div class="quarter">
+                    <h5><span id="quarter">1st</span> Quarter</h5>
+                    <div class="btn-quarter">
+                        <button class="arrow-btn" id="inc-quarter" onclick="incQuarter()">ʌ</button>
+                        <button class="arrow-btn" id="dec-quarter" onclick="decQuarter()">v</button>
+                    </div> 
+                    
+                </div>
+                <div class="timer">
+                    <span id="min">00</span>
+                    <span>:</span>
+                    <span id="sec">00</span>
+                    <!-- <span>:</span>
+                    <span id="msec">00</span> -->
+                </div>
+                <div id="time-adj">
+                    <span>min:</span>
+                    <div class="btn-quarter">
+                        <button class="arrow-btn" onclick="min_up_btn()">ʌ</button>
+                        <button class="arrow-btn" onclick="min_down_btn()">v</button>
+                    </div> 
+                    <span>sec</span>
+                    <div class="btn-quarter">
+                        <button class="arrow-btn" onclick="sec_up_btn()">ʌ</button>
+                        <button class="arrow-btn" onclick="sec_down_btn()">v</button>
+                    </div> 
+                    <!-- <span>msec:</span>
+                    <div class="btn-quarter">
+                        <button class="arrow-btn" onclick="msec_up_btn()">ʌ</button>
+                        <button class="arrow-btn" onclick="msec_down_btn()">v</button>
+                    </div>  -->
+                </div>
+                <div id="start-reset">
+                    <button class="btn-strt-rst" id="start-btn" onclick="start()">Start</button>
+                    <button class="btn-strt-rst" id="stop-btn" onclick="stop()">Stop</button>
+                    <button class="btn-strt-rst" onclick="reset()">Reset</button>
+                </div>
+            </div>
+            <div class="scoreboard">
+                
+                <h3>GUEST</h3>
+                <span id="guest-score">0</span>
+                <div >
+                    <button class="btn-score" onclick="plus1_guest()">+1</button>
+                    <button class="btn-score" onclick="plus2_guest()">+2</button>
+                    <button class="btn-score" onclick="plus3_guest()">+3</button>
+                </div>
+                <div >
+                    <button class="btn-score-d" onclick="minus1_guest()">-1</button>
+                    <button class="btn-score-d" onclick="minus2_guest()">-2</button>
+                    <button class="btn-score-d" onclick="minus3_guest()">-3</button>
+                </div>
+            </div>
+            <div id="guest-foul">
+                <h5>Fouls:</h5>
+                <div class="num-fouls">
+                    <span id="fouls-guest">0</span>
+                </div>
+                
+            </div>
+            <div class="fbtn" >
+                <button class="fouls-btn" onclick="incFoul_guest()">ʌ</button>
+                <button class="fouls-btn" onclick="decFoul_guest()">v</button>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>

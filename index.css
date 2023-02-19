@@ -1,0 +1,161 @@
+@font-face {
+    font-family: Digital;
+    src: url("Assets/Digital\ Dismay.otf");
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("Assets/basketball.gif");
+    background-size: cover;
+}
+h3{
+    font-size: 50px;
+    margin-bottom: 5px;
+    margin-top: 0PX;
+}
+h5{
+    font-size: 25px;
+    margin: 5px;
+
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 900px;
+    height: 400px;
+    margin: 20px auto auto;
+    padding: 25px;
+    background-color: rgb(32, 32, 129);
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px black;
+}
+.scoreboard{
+    display: flex;
+    flex-direction: column;
+}
+#home-score, #guest-score{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-family: Digital;
+    color: white;
+    font-size: 100px;
+    width: 160px;
+    height: 135px;
+    text-align: center;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    margin: auto;
+    padding: 0px 25px 0px 0px;
+}
+.btn-score{
+    font-family: Digital;
+    font-size: 25px;
+    margin: 10px 1px;
+    width: 50px;
+    height: 40px;
+}
+.btn-score-d{
+    font-family: Digital;
+    width: 40px;
+}
+button{
+    border-radius: 5px;
+    border: 1px solid white;
+    background-color: inherit;
+    color: inherit;
+}
+.quarter{
+    display: flex;
+    padding: 5px 10px;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+.btn-quarter{
+    display: flex;
+    flex-direction: column;
+}
+.arrow-btn{
+    margin: 1px 5px 1px 1px;
+    height: 15px;
+    font-size: 8px;
+}
+#home-foul{
+    margin: auto 20px auto 0px;
+}
+#guest-foul{
+    margin: auto 0px auto 20px;
+}
+#time{
+    margin: auto 20px;
+}
+.timer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    font-family: Digital;
+    background-color: black;
+    border-radius: 5px;
+    width: 150px;
+    height: 50px;
+    color: white;
+    margin: 0px auto;
+    padding: 10px 20px;
+}
+.num-fouls{
+    font-family: Digital;
+    border-radius: 5px;
+    background-color: black;
+    height: 80px;
+    font-size: 65px;
+    color: red;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 0px 12px 0px 0px;
+}
+#time-adj{
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-strt-rst{
+    margin: 20px 5px;
+    width: 60px;
+    height: 30;
+}
+#start-reset{
+    display: flex;
+    justify-content: space-between;
+}
+button:active{
+    border: 1px solid black;
+    color: black;
+}
+.fouls-btn{
+    margin: 3px 0px;
+    width: 20px;
+    height: 35px;
+}
+.fbtn{
+    display: flex;
+    flex-direction: column;
+    margin: 38px 5px 0px;
+    padding: 0px;
+}
+#start-btn:disabled{
+    color: gray;
+    border: 1px solid gray;
+}
+#stop-btn:disabled{
+    color:gray;
+    border: 1px solid gray;
+}
