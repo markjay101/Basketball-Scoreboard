@@ -44,29 +44,32 @@
                     </div> 
                     
                 </div>
-                <div class="timer">
-                    <span id="min">00</span>
-                    <span>:</span>
-                    <span id="sec">00</span>
-                    <!-- <span>:</span>
-                    <span id="msec">00</span> -->
+                <div id="timer-clock">
+                    <div class="timer">
+                        <span id="min">00</span>
+                        <span>:</span>
+                        <span id="sec">00</span>
+                    </div>
+                    <div>
+                        <span id="shot-clock" onclick="reset_shotClock()">24</span>
+                    </div>
                 </div>
+                
                 <div id="time-adj">
-                    <span>min:</span>
                     <div class="btn-quarter">
                         <button class="arrow-btn" onclick="min_up_btn()">ʌ</button>
                         <button class="arrow-btn" onclick="min_down_btn()">v</button>
                     </div> 
-                    <span>sec</span>
+                    <span>:</span>
                     <div class="btn-quarter">
                         <button class="arrow-btn" onclick="sec_up_btn()">ʌ</button>
                         <button class="arrow-btn" onclick="sec_down_btn()">v</button>
                     </div> 
-                    <!-- <span>msec:</span>
-                    <div class="btn-quarter">
-                        <button class="arrow-btn" onclick="msec_up_btn()">ʌ</button>
-                        <button class="arrow-btn" onclick="msec_down_btn()">v</button>
-                    </div>  -->
+                    
+                    <div class="shot-clock-btns">
+                        <button class="arrow-btn" onclick="shot_up_btn()">ʌ</button>
+                        <button class="arrow-btn" onclick="shot_down_btn()">v</button>
+                    </div>
                 </div>
                 <div id="start-reset">
                     <button class="btn-strt-rst" id="start-btn" onclick="start()">Start</button>

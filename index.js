@@ -7,16 +7,26 @@ let homescore = parseInt(document.getElementById("home-score").textContent)
 let guestscore = parseInt(document.getElementById("guest-score").textContent) 
 let min = 0
 let sec = 0
+let shotClock = 0
 let interval = null
 let remainingSeconds = 720
+let shotClockTime = 24
 document.getElementById("stop-btn").disabled = true
 Timer()
 function Timer(){
     min = Math.floor(remainingSeconds / 60)
     sec = remainingSeconds % 60
-
+    shotClock = shotClockTime % 60
     document.getElementById("min").textContent = min.toString().padStart(2, "0")
     document.getElementById("sec").textContent = sec.toString().padStart(2, "0")
+    document.getElementById("shot-clock").textContent = shotClock.toString().padStart(2, "0")
+
+    if(shotClock < 6){
+        document.getElementById("shot-clock").style.color = "red"
+    } 
+    else{
+        document.getElementById("shot-clock").style.color = "rgb(251, 251, 142)"
+    }
 }
 function highlightScore(){
     if(homescore > guestscore){
@@ -62,15 +72,22 @@ function start(){
 
     interval = setInterval(() =>{
         remainingSeconds--
+        shotClockTime--
         Timer()
 
-        if(remainingSeconds <= 0){
+        if(remainingSeconds < 0){
             clearInterval(interval)
             interval = null
             remainingSeconds = 720
+            shotClockTime = 24
             Timer()
             timerQuarter()
-        }    
+        } 
+        if(shotClock < 0){
+            shotClockTime = 24
+            Timer()
+        
+        }   
     }, 1000)  
 }
 function stop(){
@@ -82,10 +99,15 @@ function stop(){
 function reset(){
     homescore = 0
     guestscore = 0
-    document.getElementById("home-score").textContent = 0
-    document.getElementById("guest-score").textContent = 0
+    document.getElementById("home-score").textContent = homescore
+    document.getElementById("guest-score").textContent = guestscore
     document.getElementById("quarter").textContent = "1st"
+    numfoul_guest = 0
+    numfoul_home = 0
+    document.getElementById("fouls-home").textContent = numfoul_home
+    document.getElementById("fouls-guest").textContent = numfoul_guest
     remainingSeconds = 720
+    shotClockTime = 24
     clearInterval(interval)
     interval = 0
     Timer()
@@ -147,7 +169,7 @@ function min_down_btn(){
     Timer()
 }
 function sec_up_btn(){
-    if(remainingSeconds > 720)
+    if(remainingSeconds > 719)
         remainingSeconds = 720
     else
         remainingSeconds += 1
@@ -158,6 +180,20 @@ function sec_down_btn(){
         remainingSeconds = 0
     else
         remainingSeconds -= 1
+    Timer()
+}
+function shot_up_btn(){
+    if(shotClockTime > 23)
+        shotClockTime = 24
+    else
+        shotClockTime += 1
+    Timer()
+}
+function shot_down_btn(){
+    if(shotClockTime <= 0)
+        shotClockTime = 0
+    else
+        shotClockTime -= 1
     Timer()
 }
 //...end

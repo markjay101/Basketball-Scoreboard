@@ -77,14 +77,28 @@ button{
     align-items: center;
     height: 50px;
 }
+#time-adj{
+    margin-top: 2px;
+    padding-left: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
 .btn-quarter{
     display: flex;
     flex-direction: column;
+    margin:0;
 }
 .arrow-btn{
-    margin: 1px 5px 1px 1px;
+    margin: 1px 5px;
     height: 15px;
-    font-size: 8px;
+    width: 50px;
+    font-size: 10px;
+}
+.shot-clock-btns{
+    display: flex;
+    flex-direction: column;
+    padding-left: 27px;
 }
 #home-foul{
     margin: auto 20px auto 0px;
@@ -107,7 +121,22 @@ button{
     height: 50px;
     color: white;
     margin: 0px auto;
-    padding: 10px 20px;
+    padding: 4px 8px;
+}
+#timer-clock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#shot-clock{
+    font-family: Digital;
+    font-size: 50px;
+    margin: auto auto auto 5px;
+    padding: 4px 8px;
+    border: 1px solid rgb(251, 251, 142);
+    background-color: black;
+    border-radius: 5px;
+    color:  rgb(251, 251, 142);
 }
 .num-fouls{
     font-family: Digital;
@@ -121,12 +150,7 @@ button{
     align-items: center;
     padding: 0px 12px 0px 0px;
 }
-#time-adj{
-    margin-top: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 .btn-strt-rst{
     margin: 20px 5px;
     width: 60px;
@@ -159,3 +183,4 @@ button:active{
     color:gray;
     border: 1px solid gray;
 }
+
